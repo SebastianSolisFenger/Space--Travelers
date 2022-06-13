@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Mukta', sans-serif;

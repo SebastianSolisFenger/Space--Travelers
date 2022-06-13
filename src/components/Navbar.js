@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from '../assets/planet.png';
 import routes from '../routes';
+import './Navbar.css';
 
 const Navbar = () => (
   <header className="containedHeader">
     <div className="logo-title">
-      <img src={logo} alt="Page's Logo" />
+      <img src={logo} className="img-logo" alt="Page's Logo" />
       <h1>Space Travelers Hub</h1>
     </div>
     <nav>
