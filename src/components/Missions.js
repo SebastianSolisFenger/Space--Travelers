@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
 import MissionStatus from './MissionStatus';
+import './Missions.css';
 
 const Missions = () => {
   const missions = [
