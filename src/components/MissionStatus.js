@@ -3,7 +3,21 @@ import PropTypes from 'prop-types';
 
 const MissionStatus = (props) => {
   const { active } = props;
-  return <h2>{active ? 'Active member' : 'Not A Member'}</h2>;
+
+  const statusStyle = {
+    backgroundColor: active ? 'var(--green)' : 'var(--black-1)',
+    borderRadius: '2px',
+    fontSize: '12px',
+    padding: '2px 4px',
+    whiteSpace: 'nowrap',
+    color: 'white',
+  };
+
+  return (
+    <h2 style={statusStyle}>
+      { active ? 'Active Member' : 'NOT A MEMBER' }
+    </h2>
+  );
 };
 
 MissionStatus.propTypes = {
