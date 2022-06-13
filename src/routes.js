@@ -1,19 +1,19 @@
-import Missions from './components/Missions';
+import MissionsPage from './Pages/MissionsPage';
 import MyProfile from './Pages/MyProfile';
-import AllRockets from './components/AllRockets';
+import RocketsPage from './Pages/RocketsPage';
 
 const routes = [
   {
     id: 0,
     path: '/',
     title: 'Rockets',
-    element: <AllRockets />,
+    element: <RocketsPage />,
   },
   {
     id: 1,
     path: '/missions',
     title: 'Missions',
-    element: <Missions />,
+    element: <MissionsPage />,
   },
   {
     id: 2,
