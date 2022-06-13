@@ -1,3 +1,5 @@
+import MissionsPage from './Pages/MissionsPage';
+
 const routes = [
   {
     id: 0,
@@ -8,6 +10,7 @@ const routes = [
     id: 1,
     path: '/missions',
     title: 'Missions',
+    element: <MissionsPage />,
   },
   {
     id: 2,
