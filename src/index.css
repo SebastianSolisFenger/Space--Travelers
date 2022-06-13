@@ -15,6 +15,9 @@ html {
 
 :root {
   --black: #212121;
+  --black-1: #707580;
+  --black-2: #dadada;
   --grey: #dadada;
   --purple: #4d17ff;
+  --green: #0099b6;
 }
