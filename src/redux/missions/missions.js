@@ -1,5 +1,7 @@
 import initialMissions from './initialMissions';
 
+const url = 'https://api.spacexdata.com/v3/missions';
+
 // const GET_MISSIONS = 'spacetravelers/GET_MISSIONS';
 const GET_MISSIONS_LOADING = 'spacetravelers/GET_MISSIONS_LOADING';
 const GET_MISSIONS_FAILURE = 'spacetravelers/GET_MISSIONS_FAILURE';
