@@ -15,6 +15,18 @@ export const getMissionsSuccess = (missions) => ({
   payload: missions,
 });
 
+export const getMissions = (dispatch) => {
+  dispatch(getMissionsLoading());
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      dispatch(getMissionsSuccess(data));
+    })
+    .catch((err) => {
+      dispatch(getMissionsFailure(err.message));
+    });
+};
+
 const missions = (state = initialMissions, action) => {
   switch (action.type) {
     case GET_MISSIONS_FAILURE:
