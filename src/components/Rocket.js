@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import './Rockets.css';
 
 const Rocket = ({
   id, desc, name, img,
 }) => (
-  <div className="rocket-info flexrow" id={id}>
+  <div className="rocket-info" id={id}>
     <div className="rocket-img">
-      <img src={img} alt="rockets"/>
+      <img src={img} className="image" alt="rockets"/>
     </div>
-    <div className="rocket-details flexcolumn">
+    <div className="rocket-details">
 <h1>{name}</h1>
 <p>{desc}</p>
 <button type="button" className="reservebtn">Reserve Rocket</button>
