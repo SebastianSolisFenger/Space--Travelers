@@ -2,17 +2,24 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import MissionStatus from './MissionStatus';
+import { getMissions, joinMission, leaveMission } from '../redux/missions/missions';
 import './Missions.css';
 
-import { getMissions } from '../redux/missions/missions';
+// import { getMissions } from '../redux/missions/missions';
 
 const Missions = () => {
   const { missions, loading } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getMissions());
-  }, []);
+  useEffect(() => ( missions.length === 0 ) && dispatch(getMissions()), []);
+
+  const joinAMission = (id) => {
+    dispatch(joinMission(id));
+  }
+
+  const leaveAMission = (id) => {
+    dispatch(leaveMission(id));
+  }
 
   let content = null;
 
@@ -33,10 +40,10 @@ const Missions = () => {
                 <td>{mission.mission_name}</td>
                 <td>{mission.description}</td>
                 <td>
-                  <MissionStatus active />
+                  <MissionStatus active={mission.joined} />
                 </td>
                 <td>
-                  <button type="button">Join a Mission</button>
+                  {mission.joined ? <button type="button" className="leavemission-btn" onClick={() => leaveAMission(mission.mission_id)}>Leave Mission</button> : <button type="button" className="joinmission-btn" onClick={() => joinAMission(mission.mission_id)}>Join a Mission</button> }
                 </td>
               </tr>
             ))}

@@ -13,3 +13,16 @@ td {
 tr:nth-child(even) {
   background-color: #d0d0d0;
 }
+
+.leavemission-btn {
+  color: red;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.joinmission-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+}
