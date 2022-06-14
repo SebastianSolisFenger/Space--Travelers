@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
+import './Rockets.css';
 
 const Rocket = ({
   id, desc, name, img,
 }) => (
-  <div id={id}>
-    <span>{id}</span>
-    <span><p>{name}</p></span>
-    <span>{desc}</span>
-    <span>{img}</span>
+  <div className="rocket-info" id={id}>
+    <div className="rocket-img">
+      <img src={img} className="image" alt="rockets"/>
+    </div>
+    <div className="rocket-details">
+<h1>{name}</h1>
+<p>{desc}</p>
+<button type="button" className="reservebtn">Reserve Rocket</button>
+    </div>
   </div>
 );
 

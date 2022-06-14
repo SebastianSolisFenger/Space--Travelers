@@ -1,46 +1,29 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
 import './AllRockets.css';
+import { getRocketList } from '../redux/rockets/rockets'
 
-class AllRockets extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      rockets: [{
-        id: 1,
-        rocket_name: 'Rocket1',
-        description: 'descript 1',
-        flickr_images: 'https://img1.jpg',
-      },
-      {
-        id: 2,
-        rocket_name: 'Rocket2',
-        description: 'descript 2',
-        flickr_images: 'https://img2.jpg',
-      },
-      {
-        id: 3,
-        rocket_name: 'Rocket3',
-        description: 'descript 3',
-        flickr_images: 'https://img3.jpg',
-      }],
-    };
-  }
+const AllRockets = () => {
+ const dispatch = useDispatch();
+ const rockets = useSelector((state) => state.rocketsReducer);
 
-  render() {
-    const { rockets } = this.state;
+ useEffect(() => { 
+   dispatch(getRocketList());
+ }, [dispatch]);
+
     return (
       rockets.map((rocket) => (
+        <div  key={rocket.id}>
         <Rocket
-          key={rocket.id}
           id={rocket.id}
-          name={rocket.rocket_name}
-          img={rocket.flickr_images}
-          desc={rocket.description}
+          name={rocket.name}
+          img={rocket.img}
+          desc={rocket.desc}
         />
+        </div>
       ))
     );
   }
-}
 
 export default AllRockets;
