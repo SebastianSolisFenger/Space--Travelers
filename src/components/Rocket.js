@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 const Rocket = ({
   id, desc, name, img,
 }) => (
-  <div id={id}>
-    <span>{id}</span>
-    <span><p>{name}</p></span>
-    <span>{desc}</span>
-    <span>{img}</span>
+  <div className="rocket-info flexrow" id={id}>
+    <div className="rocket-img">
+      <img src={img} alt="rockets"/>
+    </div>
+    <div className="rocket-details flexcolumn">
+<h1>{name}</h1>
+<p>{desc}</p>
+<button type="button" className="reservebtn">Reserve Rocket</button>
+    </div>
   </div>
 );
 
