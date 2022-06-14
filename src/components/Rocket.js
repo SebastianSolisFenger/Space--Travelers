@@ -19,7 +19,7 @@ const Rocket = ({ id, desc, name, img, reserv }) => {
       Cancel Reservation
     </button>
   );
-  const reserved = <p id="reserved">Reserved</p>;
+  const reserved = <mark id="reserved">Reserved</mark>;
 
   return (
     <div className="rocket-info flex-row" id={id}>
@@ -29,8 +29,10 @@ const Rocket = ({ id, desc, name, img, reserv }) => {
       <div className="rocket-details flex-column">
         <h1>{name}</h1>
         <span className="res flex-row">
-          {reserv ? reserved : null}
-          <p>{desc}</p>
+          <p>
+            {reserv ? reserved : null}
+            {desc}
+          </p>
         </span>
         {reserv === false ? resBtn : cancelBtn}
       </div>
