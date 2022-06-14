@@ -10,12 +10,12 @@ const Rocket = ({ id, desc, name, img, reserv }) => {
   const cancel = () => dispatch(deleteReservation(id));
 
   const resBtn = (
-    <button type="button" className="reserveBtn" onClick={reserve}>
+    <button type="button" id="reserveBtn" onClick={reserve}>
       Reserve Rocket
     </button>
   );
   const cancelBtn = (
-    <button type="button" className="reserveBtn" onClick={cancel}>
+    <button type="button" id="cancelBtn" onClick={cancel}>
       Cancel Reservation
     </button>
   );

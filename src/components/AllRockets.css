@@ -24,6 +24,14 @@ div {
   justify-content: center;
 }
 
+.rocket-details h1 {
+  margin-bottom: 12px;
+}
+
+.rocket-details button {
+  margin-top: 12px;
+}
+
 .rocket-img {
   width: 25%;
 }
@@ -33,7 +41,7 @@ div {
   max-height: 250px;
 }
 
-.reserveBtn {
+#reserveBtn {
   cursor: pointer;
   height: 2rem;
   width: 20%;
@@ -44,15 +52,31 @@ div {
   color: white;
 }
 
+#cancelBtn {
+  cursor: pointer;
+  height: 2rem;
+  color: var(--black-1);
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+}
+
 .res {
   justify-content: center;
   align-items: center;
+}
+
+.res p {
+  font-size: 16px;
+  margin: 0.5rem 0;
 }
 
 #reserved {
   height: 15px;
   padding: 2px 5px;
   margin-right: 12px;
+  margin-bottom: 12px;
   text-align: center;
   align-items: center;
   background-color: var(--green);
