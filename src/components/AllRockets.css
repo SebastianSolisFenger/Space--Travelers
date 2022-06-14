@@ -1,3 +1,41 @@
 div {
   margin: 0;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-details {
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 70%;
+  padding: 7px 10px;
+}
+
+.rocket-img {
+  width: 25%;
+}
+
+.image img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.reservebtn {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 20%;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--light-blue);
+  color: white;
+}

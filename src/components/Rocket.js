@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import './Rockets.css';
 
-const Rocket = ({
-  id, desc, name, img,
-}) => (
-  <div className="rocket-info" id={id}>
+const Rocket = ({ id, desc, name, img }) => (
+  <div className="rocket-info flex-row" id={id}>
     <div className="rocket-img">
-      <img src={img} className="image" alt="rockets"/>
+      <img src={img} className="image" alt="rockets" />
     </div>
-    <div className="rocket-details">
-<h1>{name}</h1>
-<p>{desc}</p>
-<button type="button" className="reservebtn">Reserve Rocket</button>
+    <div className="rocket-details flex-column">
+      <h1>{name}</h1>
+      <p>{desc}</p>
+      <button type="button" className="reservebtn">
+        Reserve Rocket
+      </button>
     </div>
   </div>
 );
