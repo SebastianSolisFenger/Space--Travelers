@@ -10,6 +10,10 @@ const Missions = () => {
   const { missions, loading } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
+  const joinEventHandler = () => {
+    dispatch(getMissions(id));
+  }
+
   useEffect(() => {
     dispatch(getMissions());
   }, []);
@@ -36,7 +40,7 @@ const Missions = () => {
                   <MissionStatus active />
                 </td>
                 <td>
-                  <button type="button">Join a Mission</button>
+                  <button type="button" onClick={joinEventHandler}>Join a Mission</button>
                 </td>
               </tr>
             ))}

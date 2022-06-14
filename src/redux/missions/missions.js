@@ -6,8 +6,10 @@ const url = 'https://api.spacexdata.com/v3/missions';
 const GET_MISSIONS_LOADING = 'spacetravelers/GET_MISSIONS_LOADING';
 const GET_MISSIONS_FAILURE = 'spacetravelers/GET_MISSIONS_FAILURE';
 const GET_MISSIONS_SUCCESS = 'spacetravelers/GET_MISSIONS_SUCCESS';
+const JOIN_MISSION = 'space-travelers-hub/missions/JOIN_MISSION';
 
 export const getMissionsLoading = () => ({ type: GET_MISSIONS_LOADING });
+export const joinMission = (payload) => ({ type: JOIN_MISSION, id: payload });
 export const getMissionsFailure = (errMessage) => ({
   type: GET_MISSIONS_FAILURE,
   payload: errMessage,
@@ -37,6 +39,12 @@ const missions = (state = initialMissions, action) => {
       return { ...state, loading: true };
     case GET_MISSIONS_SUCCESS:
       return { ...state, missions: action.payload, loading: false };
+      case JOIN_MISSION: {
+        const nextState = state.map((mission) =>
+        mission.id !== action.payload ? mission : { ...mission, reserved: true }
+      );
+      return [...nextState];
+    }
     default:
       return state;
   }
