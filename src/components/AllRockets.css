@@ -54,6 +54,7 @@ div {
 
 #cancelBtn {
   cursor: pointer;
+  box-shadow: 5px 5px 10px 3px #888;
   height: 2rem;
   color: var(--black-1);
   background-color: var(--white);
