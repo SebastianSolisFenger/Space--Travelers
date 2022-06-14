@@ -6,7 +6,7 @@ const url = 'https://api.spacexdata.com/v3/missions';
 const GET_MISSIONS_LOADING = 'spacetravelers/GET_MISSIONS_LOADING';
 const GET_MISSIONS_FAILURE = 'spacetravelers/GET_MISSIONS_FAILURE';
 const GET_MISSIONS_SUCCESS = 'spacetravelers/GET_MISSIONS_SUCCESS';
-const JOIN_MISSION = 'space-travelers-hub/missions/JOIN_MISSION';
+const JOIN_MISSION = 'spacetravelersJOIN_MISSION';
 
 export const getMissionsLoading = () => ({ type: GET_MISSIONS_LOADING });
 export const joinMission = (payload) => ({ type: JOIN_MISSION, id: payload });

@@ -1,12 +1,14 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import MissionStatus from './MissionStatus';
 import './Missions.css';
 
 import { getMissions } from '../redux/missions/missions';
 
-const Missions = () => {
+const Missions = (props) => {
+  const { id } = props;
   const { missions, loading } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
@@ -40,6 +42,7 @@ const Missions = () => {
                   <MissionStatus active />
                 </td>
                 <td>
+                  {/* <button type="button">Join a Mission</button> */}
                   <button type="button" onClick={joinEventHandler}>Join a Mission</button>
                 </td>
               </tr>
@@ -51,6 +54,12 @@ const Missions = () => {
   }
 
   return <div className="missions">{content}</div>;
+};
+
+Missions.propTypes = {
+  id: PropTypes.func.isRequired,
+  // name: PropTypes.func.isRequired,
+  // description: PropTypes.func.isRequired,
 };
 
 export default Missions;
