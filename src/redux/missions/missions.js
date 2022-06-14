@@ -17,7 +17,7 @@ export const getMissionsSuccess = (missions) => ({
   payload: missions,
 });
 
-export const getMissions = (dispatch) => {
+export const getMissions = () => (dispatch) => {
   dispatch(getMissionsLoading());
   fetch(url)
     .then((response) => response.json())

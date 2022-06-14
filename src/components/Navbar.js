@@ -16,7 +16,7 @@ const Navbar = () => (
           <li key={route.id}>
             <NavLink
               className={({ isActive }) =>
-                isActive ? 'nav-item active' : 'menu-item'
+                isActive ? 'nav-item active' : 'nav-item'
               }
               to={route.path}
             >

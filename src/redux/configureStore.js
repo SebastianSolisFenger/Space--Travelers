@@ -6,12 +6,12 @@ import {
 
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import rocketsReducer from './rockets/rockets';
-import missionReducer from './missions/missions';
+// import rocketsReducer from './rockets/rockets';
+// import missionReducer from './missions/missions';
+import missions from './missions/missions';
 
 const rootReducer = combineReducers({
-  rocketsReducer,
-  missionReducer,
+  missions,
 });
 
 const store = createStore(rootReducer, applyMiddleware(logger, thunk));
