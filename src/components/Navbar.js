@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/planet.png';
 import routes from '../routes';
 import './Navbar.css';
@@ -13,7 +14,14 @@ const Navbar = () => (
       <ul className="nav-list">
         {routes.map((route) => (
           <li key={route.id}>
-            <a href={route.path}>{route.title}</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'nav-item active' : 'nav-item'
+              }
+              to={route.path}
+            >
+              {route.title}
+            </NavLink>
           </li>
         ))}
       </ul>

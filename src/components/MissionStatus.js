@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 const MissionStatus = (props) => {
   const { active } = props;
 
-  const statusStyle = {
+  const statusMemberStyle = {
     backgroundColor: active ? 'var(--green)' : 'var(--black-1)',
-    borderRadius: '2px',
-    fontSize: '12px',
-    padding: '2px 4px',
+    borderRadius: '5px',
+    fontSize: '14px',
+    padding: '3px 5px',
     whiteSpace: 'nowrap',
     color: 'white',
   };
 
   return (
-    <h2 style={statusStyle}>
-      { active ? 'Active Member' : 'NOT A MEMBER' }
+    <h2 style={statusMemberStyle}>
+      {active ? 'Active Member' : 'NOT A MEMBER'}
     </h2>
   );
 };

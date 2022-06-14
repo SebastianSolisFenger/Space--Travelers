@@ -25,6 +25,17 @@ header {
   list-style: none;
   list-style-type: none;
   text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-item {
+  padding: 2px 8px 2px 8px;
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.nav-item.active {
+  text-decoration: underline;
 }
 
 .logo-title h1 {
