@@ -62,12 +62,12 @@ div {
   width: 20%;
 }
 
-.res {
+.reservationSpan {
   justify-content: center;
   align-items: center;
 }
 
-.res p {
+.reservationSpan p {
   font-size: 16px;
   margin: 0.5rem 0;
 }

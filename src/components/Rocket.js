@@ -28,7 +28,7 @@ const Rocket = ({ id, desc, name, img, reserv }) => {
       </div>
       <div className="rocket-details flex-column">
         <h1>{name}</h1>
-        <span className="res flex-row">
+        <span className="reservationSpan flex-row">
           <p>
             {reserv ? reserved : null}
             {desc}
