@@ -21,6 +21,7 @@ export const getRocketList = () => async (dispatch) => {
       desc: rocket.description,
       name: rocket.rocket_name,
       img: rocket.flickr_images[0],
+      reserv: false,
     })
   );
   dispatch(getRockets(infoArr));
@@ -28,12 +29,19 @@ export const getRocketList = () => async (dispatch) => {
 
 const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_RESERVATION:
-      return [...state, action.payload];
-      case GET_ROCKETS:
-        return action.payload;
+    case ADD_RESERVATION: {
+      const nextState = state.map((rocket) =>
+        rocket.id !== action.payload ? rocket : { ...rocket, reserv: true }
+      );
+      return [...nextState];
+    }
+
+    case GET_ROCKETS:
+      return action.payload;
     case DELETE_RESERVATION:
-      return state.filter((rocket) => rocket.id !== action.payload.id);
+      return state.map((rocket) =>
+        rocket.id !== action.payload ? rocket : { ...rocket, reserv: false }
+      );
     default:
       return state;
   }
