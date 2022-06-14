@@ -2,7 +2,7 @@ const GET_ROCKETS = './space-travelers/rockets/GET_ROCKETS';
 const ADD_RESERVATION = './space-travelers/rockets/ADD_RESERVATION';
 const DELETE_RESERVATION = './space-travelers/rockets/DELETE_RESERVATION';
 
-// const url = 'https://api.spacexdata.com/v3/rockets';
+const url = 'https://api.spacexdata.com/v3/rockets';
 const initialState = [];
 
 export const addReservation = (payload) => ({ type: ADD_RESERVATION, payload });
@@ -13,7 +13,7 @@ export const deleteReservation = (payload) => ({
 });
 
 export const getRocketList = () => async (dispatch) => {
-  const rocketList = await fetch(`{url}`).then((resp) => resp.json());
+  const rocketList = await fetch(`${url}`).then((resp) => resp.json());
   const infoArr = [];
   rocketList.map((rocket) =>
     infoArr.push({
