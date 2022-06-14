@@ -11,10 +11,7 @@ const Missions = () => {
   const { missions, loading } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if ( missions.length === 0 )
-    dispatch(getMissions());
-  }, []);
+  useEffect(() => ( missions.length === 0 ) && dispatch(getMissions()), []);
 
   const joinAMission = (id) => {
     dispatch(joinMission(id));
