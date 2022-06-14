@@ -3,7 +3,9 @@ header {
   height: 62px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 12px;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
 }
 
 .logo-title {
