@@ -13,11 +13,23 @@ div {
   flex-direction: column;
 }
 
-.rocket-details {
-  align-items: flex-start;
+.rocket-info {
+  align-items: center;
   justify-content: space-between;
+}
+
+.rocket-details {
   width: 70%;
-  padding: 7px 10px;
+  padding: 5px 10px;
+  justify-content: center;
+}
+
+.rocket-details h1 {
+  margin-bottom: 12px;
+}
+
+.rocket-details button {
+  margin-top: 12px;
 }
 
 .rocket-img {
@@ -29,13 +41,45 @@ div {
   max-height: 250px;
 }
 
-.reservebtn {
+#reserveBtn {
   cursor: pointer;
-  height: 2.5rem;
+  height: 2rem;
   width: 20%;
-  padding: 4px 8px;
+  padding: 2px 4px;
   border: 0;
   border-radius: 5px;
   background-color: var(--light-blue);
   color: white;
+}
+
+#cancelBtn {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 3px #888;
+  height: 2rem;
+  color: var(--black-1);
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+}
+
+.reservationSpan {
+  justify-content: center;
+  align-items: center;
+}
+
+.reservationSpan p {
+  font-size: 16px;
+  margin: 0.5rem 0;
+}
+
+#reserved {
+  height: 15px;
+  padding: 2px 5px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--green);
+  color: var(--white);
 }
