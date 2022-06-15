@@ -39,8 +39,8 @@ It is created with [Create-React-App](https://github.com/facebook/create-react-a
 ## Authors
 
 #### :bust_in_silhouette: Sebastian Solis
-  - [Sebastian Solis](https://github.com/SebastianSolisFenger)
-  - [LinkedIn](https://www.linkedin.com/in/sebastiansolisfenger/) 
+  - Github: [Sebastian Solis](https://github.com/SebastianSolisFenger)
+ - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sebastiansolisfenger/) 
 
 
 👤 **Adaobi Vivian Okoye**
