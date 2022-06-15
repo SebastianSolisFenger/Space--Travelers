@@ -1,0 +1,85 @@
+div {
+  margin: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-info {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rocket-details {
+  width: 98%;
+  padding: 5px 10px;
+  justify-content: center;
+}
+
+.rocket-details h1 {
+  margin-bottom: 12px;
+}
+
+.rocket-details button {
+  margin-top: 12px;
+}
+
+.rocket-img {
+  width: 40%;
+}
+
+.image img {
+  max-width: 250px;
+  max-height: 250px;
+}
+
+#reserveBtn {
+  cursor: pointer;
+  height: 2rem;
+  width: 20%;
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--light-blue);
+  color: white;
+}
+
+#cancelBtn {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 3px #888;
+  height: 2rem;
+  color: var(--black-1);
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+}
+
+.reservationSpan {
+  justify-content: center;
+  align-items: center;
+}
+
+.reservationSpan p {
+  font-size: 16px;
+  margin: 0.5rem 0;
+}
+
+#reserved {
+  height: 15px;
+  padding: 2px 5px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--green);
+  color: var(--white);
+}

@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 html {
   box-sizing: border-box;
   font-family: 'Mukta', sans-serif;
 }
 
-body.noScroll {
-  overflow: hidden;
+:root {
+  --black: #212121;
+  --black-1: #707580;
+  --black-2: #dadada;
+  --grey: #dadada;
+  --purple: #4d17ff;
+  --green: #0099b6;
+  --light-blue: #3b7b99;
+  --white: #fff;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-}
-
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
+h1,
+h2,
+a {
+  font-family: Montserrat, sans-serif;
 }
