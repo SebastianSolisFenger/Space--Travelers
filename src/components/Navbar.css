@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid grey;
   margin-bottom: 10px;
 }
 
