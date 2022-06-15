@@ -6,6 +6,9 @@ import './index.css';
 import { Provider } from 'react-redux';
 import App from './App';
 import store from './redux/configureStore';
+import { getRocketList } from './redux/rockets/rockets';
+
+store.dispatch(getRocketList());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
