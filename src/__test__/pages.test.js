@@ -6,8 +6,8 @@ import RocketsPage from '../pages/RocketsPage';
 import MissionsPage from '../pages/MissionsPage';
 import MyProfile from '../pages/MyProfile';
 
-describe('Testing if all the pages render correctly', () => {
-  it('Testing Rockets page (main one)', () => {
+describe('Testing if all pages renders correctly', () => {
+  it('Testing Rockets page', () => {
     const tree = render(
       <Provider store={store}>
         <RocketsPage />
@@ -15,7 +15,7 @@ describe('Testing if all the pages render correctly', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('Testing if (Missions page) renders correctly', () => {
+  it('Testing Missions page', () => {
     const tree = render(
       <Provider store={store}>
         <MissionsPage />
@@ -23,7 +23,7 @@ describe('Testing if all the pages render correctly', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('Testing if (My Profile Page) renders correctly', () => {
+  it('Testing My Profile Page', () => {
     const tree = render(
       <Provider store={store}>
         <MyProfile />
