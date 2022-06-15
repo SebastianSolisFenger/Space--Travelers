@@ -86,26 +86,28 @@ Object {
         class="myProfileDisplays"
       >
         <div
-          class="missionsReservationDisplay"
+          class="reservationDisplay"
         >
           <h1>
-            My Missions Reservations
-          </h1>
-          <h3
-            class="NoReservedRockets"
-          >
-            No mission joined
-          </h3>
-        </div>
-        <div>
-          <h1>
-            My Rocket Reservations
+            My Rockets
           </h1>
           <h4
             class="NoReservedRockets"
           >
             No Reserved Rockets
           </h4>
+        </div>
+        <div
+          class="missionsDisplay"
+        >
+          <h1>
+            My Missions 
+          </h1>
+          <h3
+            class="NoReservedRockets"
+          >
+            No mission joined
+          </h3>
         </div>
       </div>
     </div>
@@ -115,26 +117,28 @@ Object {
       class="myProfileDisplays"
     >
       <div
-        class="missionsReservationDisplay"
+        class="reservationDisplay"
       >
         <h1>
-          My Missions Reservations
-        </h1>
-        <h3
-          class="NoReservedRockets"
-        >
-          No mission joined
-        </h3>
-      </div>
-      <div>
-        <h1>
-          My Rocket Reservations
+          My Rockets
         </h1>
         <h4
           class="NoReservedRockets"
         >
           No Reserved Rockets
         </h4>
+      </div>
+      <div
+        class="missionsDisplay"
+      >
+        <h1>
+          My Missions 
+        </h1>
+        <h3
+          class="NoReservedRockets"
+        >
+          No mission joined
+        </h3>
       </div>
     </div>
   </div>,

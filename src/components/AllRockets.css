@@ -19,7 +19,7 @@ div {
 }
 
 .rocket-details {
-  width: 70%;
+  width: 98%;
   padding: 5px 10px;
   justify-content: center;
 }
@@ -33,7 +33,7 @@ div {
 }
 
 .rocket-img {
-  width: 25%;
+  width: 40%;
 }
 
 .image img {

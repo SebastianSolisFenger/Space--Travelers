@@ -19,6 +19,9 @@ tr:nth-child(even) {
   width: 100px;
   height: 40px;
   font-size: 14px;
+  background-color: white;
+  border-color: red;
+  border-radius: 5px;
 }
 
 .joinmission-btn {
