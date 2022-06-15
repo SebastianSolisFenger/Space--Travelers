@@ -6,11 +6,11 @@
 > 
 It is created with [Create-React-App](https://github.com/facebook/create-react-app)
 
----
-
 ## Screenshot
 
-...
+![image](https://user-images.githubusercontent.com/88522494/173899604-df84615f-8e97-4da8-87fa-082ac9cac62d.png)
+
+![image](https://user-images.githubusercontent.com/88522494/173899363-1721f324-587b-463f-acce-ae96ca9e5c20.png)
 
 ## Live version
 
