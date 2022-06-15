@@ -2,12 +2,11 @@ import initialMissions from './initialMissions';
 
 const url = 'https://api.spacexdata.com/v3/missions';
 
-// const GET_MISSIONS = 'spacetravelers/GET_MISSIONS';
-const GET_MISSIONS_LOADING = 'spacetravelers/GET_MISSIONS_LOADING';
-const GET_MISSIONS_FAILURE = 'spacetravelers/GET_MISSIONS_FAILURE';
-const GET_MISSIONS_SUCCESS = 'spacetravelers/GET_MISSIONS_SUCCESS';
-const JOIN_MISSION = 'spacetravelers/JOIN_MISSIONS';
-const LEAVE_MISSION = 'spacetravelers/LEAVE_MISSIONS';
+const GET_MISSIONS_LOADING = 'spacetravelers/missions/GET_MISSIONS_LOADING';
+const GET_MISSIONS_FAILURE = 'spacetravelers/missions/GET_MISSIONS_FAILURE';
+const GET_MISSIONS_SUCCESS = 'spacetravelers/missions/GET_MISSIONS_SUCCESS';
+const JOIN_MISSION = 'spacetravelers/missions/JOIN_MISSION';
+const LEAVE_MISSION = 'spacetravelers/missions/LEAVE_MISSION';
 
 export const getMissionsLoading = () => ({ type: GET_MISSIONS_LOADING });
 export const getMissionsFailure = (errMessage) => ({
@@ -18,14 +17,14 @@ export const getMissionsSuccess = (missions) => ({
   type: GET_MISSIONS_SUCCESS,
   payload: missions,
 });
-export const joinMission = (missionId) =>  ({
-type: JOIN_MISSION,
-payload: missionId,
+export const joinMission = (missionId) => ({
+  type: JOIN_MISSION,
+  payload: missionId,
 });
-export const leaveMission = (missionId) =>  ({
+export const leaveMission = (missionId) => ({
   type: LEAVE_MISSION,
   payload: missionId,
-  });
+});
 
 export const getMissions = () => (dispatch) => {
   dispatch(getMissionsLoading());
@@ -47,22 +46,26 @@ const missions = (state = initialMissions, action) => {
       return { ...state, loading: true };
     case GET_MISSIONS_SUCCESS:
       return { ...state, missions: action.payload, loading: false };
-      case JOIN_MISSION:
-        return { ...state, missions: state.missions.map((mission) => {
+    case JOIN_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
           if (mission.mission_id !== action.payload) {
             return mission;
           }
           return { ...mission, joined: true };
         }),
-}
-case LEAVE_MISSION:
-        return { ...state, missions: state.missions.map((mission) => {
+      };
+    case LEAVE_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
           if (mission.mission_id !== action.payload) {
             return mission;
           }
           return { ...mission, joined: false };
         }),
-}
+      };
     default:
       return state;
   }
