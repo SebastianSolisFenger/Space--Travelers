@@ -14,7 +14,7 @@ It is created with [Create-React-App](https://github.com/facebook/create-react-a
 
 ## Live version
 
-...
+[Live-Version-Netflify](https://bespoke-torte-be85b3.netlify.app/)
 
 ## Get started
 
