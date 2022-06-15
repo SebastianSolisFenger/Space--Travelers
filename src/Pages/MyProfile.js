@@ -5,22 +5,8 @@ const MyProfile = () => {
   const rockets = useSelector((state) => state.rocketsReducer);
   const reservedRockets = rockets.filter((rocket) => rocket.reserv);
 
-  const { missions } = useSelector((state) => state.missions);
-  const joinedMissions = missions.filter((missions) => missions.joined);
-
   return (
     <div className="myProfileDisplays">
-      <div className="missionsReservationDisplay">
-        <h1>My Missions Reservations</h1>
-        {!joinedMissions.length ? (
-          <h3 className="NoReservedRockets">No mission joined</h3>
-        ) : (
-          joinedMissions.map((joinedOne) => (
-            <h3 key={joinedOne.mission_id}>{joinedOne.mission_name}</h3>
-          ))
-        )}
-      </div>
-
       <div>
         <h1>My Rocket Reservations</h1>
         {!reservedRockets.length ? (
