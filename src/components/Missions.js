@@ -63,7 +63,7 @@ const Missions = () => {
                       className="joinmission-btn"
                       onClick={() => joinAMission(mission.mission_id)}
                     >
-                      Join a Mission
+                      Join Mission
                     </button>
                   )}
                 </td>
