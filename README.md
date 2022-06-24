@@ -8,9 +8,8 @@ It is created with [Create-React-App](https://github.com/facebook/create-react-a
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/88522494/173899604-df84615f-8e97-4da8-87fa-082ac9cac62d.png)
+![FireShot Capture 011 - Multi Device Website Mockup Generator - techsini com](https://user-images.githubusercontent.com/88522494/175696291-a0b69350-6669-4c06-86c4-e1dedad4f00e.png)
 
-![image](https://user-images.githubusercontent.com/88522494/173899363-1721f324-587b-463f-acce-ae96ca9e5c20.png)
 
 ## Live version
 
